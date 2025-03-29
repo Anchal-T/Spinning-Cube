@@ -106,38 +106,6 @@ int main(void)
             }
         }
 
-        // cubeWidth = 10;
-        // horizontalOffset = 1 * cubeWidth;
-
-        // for (float cubeX = -cubeWidth; cubeX < cubeWidth; cubeX += incrementalSpeed)
-        // {
-        //     for (float cubeY = -cubeWidth; cubeY < cubeWidth; cubeY += incrementalSpeed)
-        //     {
-        //         calculateSurface(cubeX, cubeY, -cubeWidth, '@');
-        //         calculateSurface(cubeWidth, cubeY, cubeX, '#');
-        //         calculateSurface(-cubeWidth, cubeY, -cubeX, '$');
-        //         calculateSurface(-cubeX, cubeY, cubeWidth, '%');
-        //         calculateSurface(cubeX, -cubeWidth, -cubeY, '^');
-        //         calculateSurface(cubeX, cubeWidth, cubeY, '&');
-        //     }
-        // }
-
-        // cubeWidth = 5;
-        // horizontalOffset = 8 * cubeWidth;
-
-        // for (float cubeX = -cubeWidth; cubeX < cubeWidth; cubeX += incrementalSpeed)
-        // {
-        //     for (float cubeY = -cubeWidth; cubeY < cubeWidth; cubeY += incrementalSpeed)
-        //     {
-        //         calculateSurface(cubeX, cubeY, -cubeWidth, '@');
-        //         calculateSurface(cubeWidth, cubeY, cubeX, '#');
-        //         calculateSurface(-cubeWidth, cubeY, -cubeX, '$');
-        //         calculateSurface(-cubeX, cubeY, cubeWidth, '%');
-        //         calculateSurface(cubeX, -cubeWidth, -cubeY, '^');
-        //         calculateSurface(cubeX, cubeWidth, cubeY, '&');
-        //     }
-        // }
-
         printf("\x1b[H");
         for (int k = 0; k < width * height; k++)
         {
@@ -147,11 +115,6 @@ int main(void)
         A += 0.05;
         B += 0.05;
         C += 0.01;
-        // unsigned int ch;
-        // if((ch = (getchar())) == 27){
-        //     printf("\e[?25h");
-        //     break;
-        // }
         usleep(8000 * 2);
     }
     return 0;
