@@ -84,7 +84,6 @@ int main(void)
     signal(SIGINT, INThandler);
     while (1)
     {
-        printf("\e[?25h");
         printf("\e[?25l");
 
         memset(buffer, backgroundAscii, width * height);
