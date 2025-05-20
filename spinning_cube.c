@@ -1,9 +1,9 @@
-#include <stdio.h>
 #include <math.h>
 #include <string.h>
 #include <unistd.h>
 #include <signal.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 void INThandler(int);
 
@@ -96,7 +96,6 @@ int main(void)
         {
             for (float cubeY = -cubeWidth; cubeY < cubeWidth; cubeY += incrementalSpeed)
             {
-                calculateSurface(cubeX, cubeY, -cubeWidth, '@');
                 calculateSurface(cubeWidth, cubeY, cubeX, '+');
                 calculateSurface(-cubeWidth, cubeY, -cubeX, '*');
                 calculateSurface(-cubeX, cubeY, cubeWidth, '%');
@@ -108,7 +107,28 @@ int main(void)
         printf("\x1b[H");
         for (int k = 0; k < width * height; k++)
         {
-            putchar(k % width ? buffer[k] : 10);
+            if (k % width == 0) {
+                putchar('\n');
+            }
+            switch (buffer[k]) {
+                case '+':
+                    printf("\033[31m+\033[0m");
+                    break;
+                case '*':
+                    printf("\033[32m*\033[0m");
+                    break;
+                case '%':
+                    printf("\033[33m%%\033[0m");
+                    break;
+                case '!':
+                    printf("\033[35m!\033[0m");
+                    break;
+                case '?':
+                    printf("\033[36m?\033[0m");
+                    break;
+                default:
+                    putchar(buffer[k]);
+            }
         }
 
         A += 0.05;
