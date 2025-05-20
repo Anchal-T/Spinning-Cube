@@ -134,7 +134,7 @@ int main(void)
         A += 0.05;
         B += 0.05;
         C += 0.01;
-        usleep(8000 * 2);
+        usleep(10000 * 2);
     }
     return 0;
 }
