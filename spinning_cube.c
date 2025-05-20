@@ -143,6 +143,7 @@ void INThandler(int sig){
     char c;
     signal(sig, SIG_IGN);
     printf("\e[?25h");
+    printf("\n");
     exit(0);
     signal(sig, SIG_IGN);
 }
