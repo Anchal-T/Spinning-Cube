@@ -99,6 +99,7 @@ int main(void)
                 calculateSurface(cubeWidth, cubeY, cubeX, '+');
                 calculateSurface(-cubeWidth, cubeY, -cubeX, '*');
                 calculateSurface(-cubeX, cubeY, cubeWidth, '%');
+                calculateSurface(cubeX, cubeY, -cubeWidth, '#');  
                 calculateSurface(cubeX, -cubeWidth, -cubeY, '!');
                 calculateSurface(cubeX, cubeWidth, cubeY, '?');
             }
@@ -119,6 +120,9 @@ int main(void)
                     break;
                 case '%':
                     printf("\033[33m%%\033[0m");
+                    break;
+                case '#':
+                    printf("\033[34m#\033[0m");
                     break;
                 case '!':
                     printf("\033[35m!\033[0m");
